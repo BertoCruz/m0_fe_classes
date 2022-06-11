@@ -121,6 +121,19 @@ class Hobbit {
     if(this.name === "Frodo"){ this.hasRing = true;}
   }
 
+// this line of code should produce a random index number to call from the disposition array for when
+//celebrateBirthday is called. However, function is not being read right within this class so that
+//I can invoke it in the celebrateBirthday method.
+
+  // function pickOne(array) {
+  //   //pick random index value
+  //   const randomIndex = Math.floor(Math.random() * array.length);
+  //
+  //   //get random item
+  //   const item = array[randomIndex];
+  //   return item;
+  // }
+
   celebrateBirthday() {
     for (var i = 0; i <= 101; i++){
       this.age = i;
@@ -131,7 +144,7 @@ class Hobbit {
         console.log(`You are now... an ADULT, my dear ${this.name}! ;)`);
       } else if(this.age === 101) {
         this.isOld = true;
-        console.log(`My My My how you've grown up so fast, wise ${this.name}! ;)`);
+        console.log(`My My My how you've grown up so fast, ${this.disposition[0]} ${this.name}! ;)`);
       }
     }
   }
@@ -139,8 +152,8 @@ class Hobbit {
 
 console.log("-------------------------\n H O B B I T")
 
-var hobbit1 = new Hobbit("Frodo",["Brave, Selfless, Thoughtful, Wise, Observant"]);
-var hobbit2 = new Hobbit("Sam", ["Loyal, Supportive, Defender, Educate, Jolly"]);
+var hobbit1 = new Hobbit("Frodo",["Brave", "Selfless", "Thoughtful", "Wise, Observant"]);
+var hobbit2 = new Hobbit("Sam", ["Loyal", "Supportive", "Defender", "Educate", "Jolly"]);
 
 console.log(hobbit1);
 console.log(hobbit2);
